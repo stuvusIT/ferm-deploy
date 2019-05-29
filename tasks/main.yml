@@ -1,0 +1,16 @@
+---
+- name: Install ferm
+  apt:
+    name:
+      - ferm
+
+- name: Copy ferm configuration files
+  copy:
+    src: ferm/
+    dest: /etc/ferm
+    mode: 0640
+    directory_mode: 0750
+    owner: root
+    group: "{{ ferm_deploy_group }}"
+  notify: Enable and restart ferm
+

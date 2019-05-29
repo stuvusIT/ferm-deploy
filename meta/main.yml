@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  author: Michel Weitbrecht (michel.weitbrecht@stuvus.uni-stuttgart.de)
+  description: Install ferm and copy configuration files
+  company: stuvus (https://stuvus.uni-stuttgart.de)
+
+  license: CC-BY-SA
+
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+
+  galaxy_tags:
+    - network
+    - firewall
+    - ferm
+    - iptables
+
+dependencies: []
