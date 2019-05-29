@@ -1,0 +1,6 @@
+---
+- name: Enable and restart ferm
+  systemd:
+    name: ferm
+    state: restarted
+    enabled: True
