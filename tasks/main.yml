@@ -1,8 +1,9 @@
 ---
-- name: Install ferm
+- name: Install ferm and ipset
   apt:
     name:
       - ferm
+      - ipset
 
 - name: Copy ferm configuration files
   copy:

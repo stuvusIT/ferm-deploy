@@ -1,6 +1,6 @@
 # ferm-deploy
 
-This role installs `ferm` and copies a folder containing ferm configuration files to `/etc/ferm`.
+This role installs `ferm` and `ipset` and copies a folder containing ferm configuration files to `/etc/ferm`.
 
 
 ## Requirements
