@@ -13,5 +13,5 @@
     directory_mode: 0750
     owner: root
     group: "{{ ferm_deploy_group }}"
-  notify: Enable and restart ferm
+  notify: Enable and reload ferm
 
