@@ -6,12 +6,9 @@
       - ipset
 
 - name: Copy ferm configuration files
-  copy:
-    src: ferm/
-    dest: /etc/ferm
-    mode: 0640
-    directory_mode: 0750
-    owner: root
-    group: "{{ ferm_deploy_group }}"
+  copy: "{{ ferm_deploy_config_files_defaults | combine( config ) }}"
+  loop: "{{ ferm_deploy_configs }}"
+  loop_control:
+    loop_var: config
   notify: Enable and reload ferm
 

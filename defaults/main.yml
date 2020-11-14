@@ -1,2 +1,9 @@
 ---
-ferm_deploy_group: root
+ferm_deploy_config_files_defaults: 
+  mode: 0640
+  directory_mode: 0750
+  owner: root
+  group: root
+ferm_deploy_configs: 
+  - src: ferm/
+    dest: /etc/ferm
