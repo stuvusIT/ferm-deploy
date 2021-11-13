@@ -12,3 +12,11 @@
     loop_var: config
   notify: Enable and reload ferm
 
+- name: Combine ip blacklists
+  ansible.builtin.command:
+    argv:
+      - bash
+      - -c
+      - 'cat {{ ferm_deploy_ip_blacklists | join(" ") }} > {{ ferm_deploy_combined_blacklists_file }}'
+  notify: Enable and reload ferm
+  when: ferm_deploy_ip_blacklists is not undefined
